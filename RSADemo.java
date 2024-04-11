@@ -8,7 +8,7 @@ public class RSADemo {
     private BigInteger publicKey;
     private BigInteger modulus;
 
-    // generate an N-bit (roughly) public and private key
+    
     RSADemo(int N) {
         BigInteger p = BigInteger.probablePrime(N / 2, random);
         BigInteger q = BigInteger.probablePrime(N / 2, random);
@@ -47,8 +47,8 @@ public class RSADemo {
         RSADemo key = new RSADemo(N);
         System.out.println(key);
 
-        // create random message, encrypt and decrypt.
-        BigInteger message = new BigInteger("8"); // create message by converting string to integer
+        
+        BigInteger message = new BigInteger("8"); 
 
         BigInteger encrypt = key.encrypt(message);
         BigInteger decrypt = key.decrypt(encrypt);
